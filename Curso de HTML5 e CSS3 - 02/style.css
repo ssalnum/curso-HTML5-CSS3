@@ -1,0 +1,104 @@
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* É possível passar a porcentagem que cada cor ocupa. */
+  background-image: linear-gradient(
+    to right,
+    #3198e2 50%,
+    #6d59c0,
+    #b93590,
+    #e33f5f,
+    #fdd579
+  );
+  background-attachment: fixed;
+}
+
+main {
+  background-color: white;
+  width: 60%;
+  padding: 1em 2em;
+  margin: 0 auto;
+  border-radius: 0.25em;
+  box-shadow: 5px 5px 15px rgba(70, 70, 70, 0.6);
+}
+
+code {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+span {
+  font-weight: bold;
+}
+
+#lista-de-links > li > .item-link {
+  color: red;
+  text-decoration: none;
+}
+
+#lista-de-links > li > .item-link:hover {
+  text-decoration: underline;
+}
+
+#lista-de-links > li > .item-link:visited {
+  color: darkred;
+}
+
+#lista-de-links > li > .item-link:active {
+  color: yellow;
+}
+
+/* Pseu-elemento */
+#lista-de-links > li > .item-link::after {
+  content: " - [link]";
+  text-decoration: none;
+  font-weight: normal;
+  color: #535353;
+}
+
+.body-ex {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: dimgray;
+  padding: 2em;
+}
+
+.menu-ex {
+  background-color: darkgrey;
+  padding: 0.5em 0;
+}
+
+.menu-ex > ul {
+  display: flex;
+}
+
+.menu-ex > ul > li {
+  list-style-type: none;
+}
+
+.menu-ex > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.main-ex {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-ex {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="react-favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meu primeiro exercício</title>
+    <style>
+      /* Estilização interna */
+      /* 
+        VANTAGEM
+        É possível aplicar estilização em diversos elementos. 
+        Possui prioridade maior em relação a estilização externa, 
+        entretanto a prioridade menor em relação à em linha.
+        É mais fácil realizar manutenções em comparação a estilização em linha.
+      */
+
+      /* 
+        DESVANTAGEM
+        A estilização apenas é aplicada nessa página. 
+        Em contrapartida, com a estilização externa, é possível reutiliza-la para
+        todos os documentos desejados. 
+      */
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <!-- Estilização em linha -->
+  <!-- 
+    DESVANTAGEM
+    É necessário alterar a propriedade CSS de acada elemento HTML.
+    Confusão para a manutençã do código.
+    
+    VANTAGEM
+    É o mais específico, ele possui preferência sobre os outros tipos de estilização.
+   -->
+  <body style="background-color: #1f1f1f">
+    <a href="page002.html">Página 002</a>
+    <div>
+      <div>
+        <h1>Olá, Mundo!</h1>
+        <hr />
+        <h2>Quebra de Linhas</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          labore impedit. Similique fuga, quis facere dicta delectus possimus ex
+          nihil ratione saepe quod tempora necessitatibus sequi eligendi ullam
+          voluptatem! Earum.
+        </p>
+        <p>
+          Quebra de linhas não afetam no interior das tags, mesmo escritas em
+          linhas diferentes, na página tudo estará na mesma linha. &lt;p&gt;
+          &lt;/p&gt;
+        </p>
+        <p>Para quebrar o texto em algum local específico: &lt;br/&gt;</p>
+        <hr />
+      </div>
+      <div>
+        <h2>Símbolos especiais:</h2>
+        <p>&reg; &copy; &trade; &euro; &pound; &yen; &cent; &Delta; &uarr;</p>
+        <hr />
+      </div>
+      <div>
+        <h2>Emojis:</h2>
+        <p>&#x1F596; &#x1F913;</p>
+        <hr />
+      </div>
+      <div>
+        <h2>Texto a carga de Imagens:</h2>
+        <img src="html5-logo.png" alt="Logo do HTML5" />
+        <h3>Imagem carrega através de link:</h3>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+          alt="Logo do JS"
+          width="400"
+          height="400"
+        />
+        <hr />
+      </div>
+      <div>
+        <h2>FavIcon adicionado</h2>
+        <hr />
+      </div>
+      <div>
+        <h1>Hierarquia de Títulos - h1</h1>
+        <h2>Sub-Título - h2</h2>
+        <h3>Sub-sub-Título - h3</h3>
+        <h4>Sub-sub-sub-Título - h4</h4>
+        <h5>Sub-sub-sub-sub-Título - h5</h5>
+        <h6>Sub-sub-sub-sub-sub-Título - h6</h6>
+        <hr />
+      </div>
+      <div>
+        <h2>Principais Formatações</h2>
+        <div>
+          <div>
+            <h3>Negrito/Destaque</h3>
+            <p>
+              TAG &lt;b&gt; &lt;/b&gt; -
+              <b>Texto em negrito, apenas formato.</b>
+            </p>
+            <p>
+              TAG &lt;strong&gt; &lt;/strong&gt; -
+              <strong>Texto com valor semântico, de destaque.</strong>
+            </p>
+          </div>
+          <div>
+            <h3>Itálico/Ênfase</h3>
+            <p>
+              TAG &lt;i&gt; &lt;/i&gt; -
+              <b>Texto em itálico, apenas formato.</b>
+            </p>
+            <p>
+              TAG &lt;em&gt; &lt;/em&gt; -
+              <strong>Texto com valor semântico, de ênfase.</strong>
+            </p>
+          </div>
+          <p>
+            Geralmente para a formatação de textos, sem o valor semântico,
+            utiliza-se CSS para estilizar.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Texto Marcado</h3>
+          <p>
+            TAG &lt;mark&gt; &lt;/mark&gt; -
+            <mark style="background-color: aquamarine">texto marcado</mark>
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h3>Texto Pequeno</h3>
+          <p>
+            TAG &lt;small&gt; &lt;/small&gt; -
+            <small>texto pequeno</small>
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h3>Texto Deletado</h3>
+          <p>TAG &lt;del&gt; &lt;/del&gt; - <del>texto excluído</del></p>
+          <hr />
+        </div>
+        <div>
+          <h3>Texto Inserido</h3>
+          <p>
+            TAG &lt;ins&gt; &lt;/ins&gt; -
+            <ins
+              >Texto marcado como inserido, dando ênfase e indicando que ele foi
+              adicionado depois.
+            </ins>
+            (POSSUI VALOR SEMÂNTICO)
+          </p>
+          <p>
+            TAG &lt;u&gt; &lt;/u&gt; -
+            <u> Texto sublinhado, não possui valor semântico. </u>
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Texto Sobrescrito</h3>
+          <p>
+            TAG &lt;sup&gt; &lt;/sup&gt; - Tag sup - para adicionar valores
+            especiais como: x<sup>20+3</sup>
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Texto Subscrito</h3>
+          <p>
+            TAG &lt;sub&gt; &lt;/sub&gt; - Tag sub - para adicionar valores
+            especiais como: H<sup>2</sup>O
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Código-fonte</h3>
+          <p>
+            TAG &lt;code&gt; &lt;/code&gt; - O comando
+            <code>document.getElementById('') </code>é escrito em JS.
+          </p>
+          <p>
+            TAG &lt;pre&gt; &lt;/pre&gt; - a Tag pre, leva em consideração todas
+            as quebras de linhas e identação.
+          </p>
+          <pre>
+           <code>
+  num = int(input('Digite um número'))
+  if num % 2 == 0:
+    print(f'O número {num} é PAR')
+  else:
+    print(f'O número {num} é ÍMPAR')
+  print('Fim do programa')
+           </code> 
+        </pre>
+        </div>
+        <hr />
+        <div>
+          <h3>Citação Simples</h3>
+          <p>
+            TAG &lt;q&gt; &lt;/q&gt; - a Tag q é utilizada para citações
+            simples.
+            <br />
+            Citação Lorem, ipsum:
+            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</q>
+          </p>
+        </div>
+        <div>
+          <h3>Citação Completas</h3>
+          <p>
+            TAG &lt;blcokquote&gt; &lt;/blockquote&gt; - a Tag blockquote é
+            utilizada para citações completas. Segundo Jeff Noble, no seu livro
+            HTML para Leigos:
+          </p>
+          <!-- O Atributo cite, é responsável por inferir a referência do trecho mencionado do livro. -->
+          <blockquote
+            cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxCOgQ6AEIOjAC#v=onepage&q=HTML&f=false"
+          >
+            A diferença entre elementos inline e um bloco de texto é importante.
+            Os elementos HTML neste capítulo descrevem os blocos de texto.
+          </blockquote>
+        </div>
+        <hr />
+        <div>
+          <h3>Abreviações</h3>
+          <p>
+            TAG &lt;abbr&gt; &lt;/abbr&gt; - a Tag abbr é responsável pelas
+            abreviações, e possui o atributo "title" que armazena o título
+            completo.
+            <br />
+            Estou aprendendo
+            <abbr title="HyperText Markup Language">HTML</abbr> e
+            <abbr title="Cascading Style Sheet">CSS</abbr>.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Texto Invertido</h3>
+          <p>
+            TAG &lt;bdo&gt; &lt;/bdo&gt; - a Tag bdo pode ser utilizado para
+            inverter o texto, passando o valor "rtl", ao atributo "dir".
+            <br />
+            EXEMPO:
+            <bdo dir="rtl">Aprendendo a criar elementos HTML.</bdo>
+          </p>
+        </div>
+        <hr />
+      </div>
+      <div>
+        <h2>Trabalhando com listas</h2>
+        <div>
+          <h3>Lista Ordenada</h3>
+          <ol type="A" start="3">
+            <!-- 1 A a I i -->
+            <li>Item 1;</li>
+            <li>Item 2;</li>
+            <ol type="I">
+              <li>Item 3;</li>
+              <li>Item 4;</li>
+              <li>Item 5;</li>
+            </ol>
+          </ol>
+          <p>
+            Através do atributo "type", é possível alterar o tipo da lista, para
+            numérico ou letras. Já com o "start", é possível escolher em qual
+            número/letra a lista irá iniciar.
+            <br />
+            Atributos utilizados nessa lista:
+            <code>&lt;ol type="A" start="3"&gt; &lt;/ol&gt;</code>
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h3>Lista Não Ordenada</h3>
+          <ul type="circle">
+            <!-- disc circle square -->
+            <li>Item 1;</li>
+            <li>Item 2;</li>
+            <li>Item 3;</li>
+            <ul type="squre">
+              <li>Item 4;</li>
+              <li>Item 5;</li>
+            </ul>
+          </ul>
+          <p>
+            Através do atributo "type", é possível alterar o tipo da lista, para
+            círculos, quadrados, etc.
+            <br />
+            Atributos utilizados nessa lista:
+            <code>&lt;ul type="circle"&gt; &lt;/ul&gt;</code>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <div>
+          <h2>Usando links externos</h2>
+          <p>
+            Link para o
+            <a href="https://github.com/ssalnum" target="_blank" rel="external"
+              >perfil no GitHub
+            </a>
+          </p>
+          <p>
+            Atributos utilizados nesse link:
+            <code
+              >&lt;a href="https://github.com/ssalnum" target="_blank"
+              rel="external"&gt; &lt;/a&gt;</code
+            >
+            <br />
+            Através do atributo "target" e passando o valor "_blank", permite
+            que ao usuário clickar no link, automaticamente abra uma nova aba e
+            redireciona ele ao link externo. Também há o atributo "rel", no qual
+            é responsável por especificar o tipo do link, se é intertno ("next",
+            "prev"), externo, etc.
+          </p>
+        </div>
+        <div>
+          <h2>Usando links internos</h2>
+          <p>
+            Para ir para a página 002, basta
+            <a href="pages/page002.html" rel="next">clickar aqui</a>.
+          </p>
+          <p>
+            Atributos utilizados nesse link:
+            <code
+              >&lt;a href="pages/page002.html" rel="next"&gt; &lt;/a&gt;</code
+            >
+            <br />
+            Através do atributo "rel", é possível especificar o tipo do link, se
+            é intertno ("next", "prev"), externo, etc.
+            <br />
+            Neste caso, é um link interno que aponta para a próxima página,
+            através do atributo "rel=next".
+            <br />
+            Além disso, há o atributo "target="_self"", no qual especifica que o
+            link aponta para a própria página.
+          </p>
+        </div>
+        <div>
+          <h2>Links para download</h2>
+          <ul>
+            <li>
+              <a
+                href="html-css/aulas-pdf/01 - História da Internet.pdf"
+                download="01 - História da Internet.pdf"
+                type="application/pdf"
+                target="_blank"
+                >Baixar livro - História da Internet - em pdf</a
+              >
+              <p>
+                Atributos utilizados nesse link:
+                <code
+                  >&lt;a href="html-css/aulas-pdf/01 - História da Internet.pdf"
+                  download="01 - História da Internet.pdf"
+                  type="application/pdf" target="_blank" &gt; &lt;/a&gt;</code
+                >
+                <br />
+                É possível realizar download de arquivos ao estabelecer o
+                atributo "download=nomeDoArquivo". Para isso funciona, também é
+                importante passar o path do arquivo, através do atributo
+                "href="path/do/arquivo"". Quando o arquivo for do tipo pdf, é
+                necesário passar o atributo "type=application/pdf".
+              </p>
+            </li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+      <div>
+        <h2>Imagem Dinâmica</h2>
+        <p>Tente abrir em diferentes resoluções:</p>
+        <p>
+          TAG &lt;picture&gt; &lt;/picture&gt; - O elemento HTML picture é um
+          container usado para especificar múltiplos elementos source para um
+          elemento específico img contido nele.
+        </p>
+        <p>
+          TAG &lt;source&gt; &lt;/source&gt; - O elemento source é utilizado
+          para especificar múltiplos recursos de mídia de elementos picture,
+          audio ou video em HTML5.
+        </p>
+        <p>
+          <code
+            >&lt;source media="(max-width: 750px)" srcset="imgs/foto-p.png"
+            type="image/png" &gt; &lt;/source&gt;</code
+          >
+          <br />
+          A imagem disponibilizada no path da tag source, é exibida assim que à
+          página ultrapassar 750px, que é estabelecido no atributo
+          "media="(max-width: 750px)""
+        </p>
+        <p>
+          <code
+            >&lt;source media="(max-width: 1000px)" srcset="imgs/foto-p.png"
+            type="image/png"&gt; &lt;/source&gt;</code
+          >
+          <br />
+          A imagem disponibilizada no path da tag source, é exibida assim que à
+          página ultrapassar 1000px, que é estabelecido no atributo
+          "media="(max-width: 1000px)""
+        </p>
+        <picture>
+          <source
+            media="(max-width: 750px)"
+            srcset="imgs/foto-p.png"
+            type="image/png"
+          />
+          <source
+            media="(max-width: 1000px)"
+            srcset="imgs/foto-m.png"
+            type="image/png"
+          />
+          <img src="imgs/foto-g.png" alt="Imagem flexível" />
+        </picture>
+      </div>
+      <div>
+        <h2>Reproduzindo áudio</h2>
+        <audio src="midia/happy-mistake.mp3" controls></audio>
+        <p>
+          Atributos utilizados na tag audio:
+          <code>
+            &lt;audio&gt; src="midia/happy-mistake.mp3" controls &lt;/audio&gt;
+          </code>
+          <br />
+          Para adicionar um audio, basta utilizar a tag "audio", juntamente com
+          o atributo "src=path/do/audio" e para mostrar os controles, utilize o
+          atributo "contorls"
+        </p>
+        <hr />
+      </div>
+      <div>
+        <h2>Inserindo vídeos hopedados localmente</h2>
+        <video width="500" controls>
+          <source src="midia/meu-video.mp4" type="video/mp4" />
+          <source src="midia/meu-video.m4v" type="video/m4v" />
+          <source src="midia/meu-video.webm" type="video/webm" />
+          <source src="midia/meu-video.ogv" type="video/ogg" />
+          <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+        </video>
+        <p>
+          Vale destacar que, a ordem dos "source" dentro da tag "vídeo",
+          influencia na tentativa de reprodução, seguindo o a ordem utilizada,
+          seria:
+          <br />
+          mp4 -> m4v -> webm -> ogv
+        </p>
+        <pre>
+          <code>
+            &lt;video width="500" controls 
+              &lt;source&gt; src="midia/meu-video.mp4" type="video/mp4"&lt;/source&gt;
+              &lt;source&gt; src="midia/meu-video.m4v" type="video/m4v"&lt;/source&gt; 
+              &lt;source&gt; src="midia/meu-video.webm"type="video/webm"&lt;/source&gt;
+              &lt;source&gt; src="midia/meu-video.ogv" type="video/ogg"&lt;/source&gt;
+            &lt;/video&gt;
+          </code>
+        </pre>
+        <hr />
+      </div>
+      <div>
+        <h2>Incorporando vídeos</h2>
+        <p>É possível incorporar vídeos através da tag iframe</p>
+        <pre>
+          <code>
+            &lt;iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/S9uPNppGsGo?si=-XQtK_U1VI16OoVA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            &gt;&lt;/iframe&gt;
+          </code>
+        </pre>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/S9uPNppGsGo?si=-XQtK_U1VI16OoVA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+        <hr>
+      </div>
+    </div>
+  </body>
+</html>

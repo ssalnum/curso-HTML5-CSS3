@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Idroid;
+  src: url("fontes/idroid.otf") format("opentype");
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #79fdca;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.cabecalho {
+  background-image: linear-gradient(to bottom, #58ff58, darkgreen);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.cabecalho > h1 {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.cabecalho > p {
+  color: #e6e6e6;
+  text-align: center;
+  margin-bottom: 1.5em;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.cabecalho nav > ul {
+  margin: 0;
+}
+
+.cabecalho nav > ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 12px 0 0;
+}
+
+.cabecalho nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.conteudo-principal {
+  background-color: white;
+  color: black;
+  width: 55%;
+  margin: 0 auto;
+  padding: 2em;
+  box-shadow: 0px 0px 20px dimgray;
+  margin-bottom: 2em;
+  border-radius: 0 0 10px 10px;
+}
+
+.conteudo-principal > h2 {
+  font-size: xx-large;
+  margin: 0;
+  font-family: Idroid;
+  color: darkgreen;
+}
+
+.conteudo-principal > p {
+  text-align: justify;
+}
+
+.conteudo-principal-titulo {
+  margin: 0;
+  font-family: Idroid;
+  color: darkgreen;
+  background-image: linear-gradient(to right, #79fdca, white);
+}
+
+.conteudo-principal > section > p {
+  text-align: justify;
+}
+
+.conteudo-principal > section > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.conteudo-principal > section > picture > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.secao-aprender_mais {
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+
+.secao-aprender_mais > h3 {
+  border-radius: 10px 10px 0 0;
+  padding: 1em;
+  background-color: darkcyan;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secao-aprender_mais > div {
+  padding: 0 1em 0.5em 1em;
+}
+
+.secao-aprender_mais > div > ol {
+  display: inline-block;
+  list-style-type: disc;
+  margin-right: 14em;
+}
+
+#right-list {
+  margin-right: 0;
+}
+
+.secao-aprender_mais > div > p {
+  text-align: justify;
+}
+
+.rodape {
+  background-color: darkgreen;
+  padding: 2em;
+  text-align: center;
+}
+
+.div-video {
+  background-color: darkgreen;
+  width: 100%;
+}
+
+.video {
+  margin: 0 auto;
+  display: block;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Módulo 02</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h2>Linear-Gradient</h2>
+        <p>
+          É possível passar a porcentagem que cada cor ocupa. Vale ressaltar que
+          o linear-gradient é um valor da propriedade background-image, e
+          <strong>NÃO</strong> do background-color.
+        </p>
+      </div>
+      <div>
+        <!-- Representação por nome -->
+        <h2 style="background-color: darkblue; color: white">
+          Título - Cor pelo Nome
+        </h2>
+      </div>
+      <div>
+        <!-- Representação por Hexadecimal -->
+        <!-- Decimal - 0 1 2 3 4 5 6 7 8 9 -->
+        <!-- Hexadecimal - 0 1 2 3 4 5 6 7 8 9 A B C D E F   -->
+        <h2 style="background-color: #00008b; color: #ffffff">
+          Título - Cor Hexadecimal
+        </h2>
+      </div>
+      <div>
+        <!-- Representação por RGB -->
+        <!-- rgb(RED, GREEN, BLUE) -->
+        <h2 style="background-color: rgb(0, 0, 139); color: rgb(255, 255, 255)">
+          Título - Cor RGB
+        </h2>
+      </div>
+      <div>
+        <!-- Representação por HSL -->
+        <!-- hsl(Hue, Staturation, Luminosity) -->
+        <h2
+          style="background-color: hsl(240, 100%, 27%); color: hsl(0, 0%, 100%)"
+        >
+          Título - Cor HSL
+        </h2>
+        <p>
+          As cores resultantes são exatamente as mesmas, mas o formato de
+          representação muda conforme o padrão escolhido.
+        </p>
+        <p>
+          Também é possível usar transparência, usando o formato RGBA (red,
+          green, blue, alpha)
+        </p>
+      </div>
+      <div>
+        <!-- Representação por RGB + Transparência -->
+        <!-- rgba(RED, GREEN, BLUE, ALPHA) -->
+        <h2 style="background-color: rgba(0, 0, 139, 0.5); color: white">
+          Nesse título, o fundo azul teve sua transparência configurada para 50%
+        </h2>
+        <hr />
+      </div>
+      <div>
+        <h2>Trabalhando com diferentes fontes</h2>
+        <ul>
+          <li>
+            <!-- Essas 3 fontes passadas, são conhecidas como SAFE FONT COMBINATIONS -->
+            <!-- Primeiramente utiliza-se a fonte Arial, caso o dispositivo do usuário não possua, será utilizada a Helvetica e  -->
+            <!-- por fim, qualquer fonte que seja sans-serif. -->
+            <h3 style="font-family: Arial, Helvetica, sans-serif">
+              Fonte: Arial - Sans-Serif
+            </h3>
+          </li>
+          <li>
+            <h3 style="font-family: 'Times New Roman', Times, serif">
+              Fonte: Times New Roman - Serif
+            </h3>
+          </li>
+          <li>
+            <h3 style="font-family: 'Courier New', Courier, monospace">
+              Fonte: Courier New - Monospace
+            </h3>
+          </li>
+        </ul>
+        <div>
+          <h3>Font-family</h3>
+          <p>
+            O tamanho das fontes possuem medidas diferentes, sendo classificadas
+            em:
+            <br />
+            - Medidas Absolutas: <code>cm, mm, in, px, pt, pc</code>;
+            <br />
+            - Medidas Relativas: <code>em, ex, rem, vw, vh, %</code>;
+          </p>
+        </div>
+        <div>
+          <h3>Font-weight</h3>
+          <p>
+            É possível alterar o peso das fontes através do
+            <code>font-weight </code>
+          </p>
+          <h4>Valores:</h4>
+          <ul>
+            <li>lighter;</li>
+            <li>normal;</li>
+            <li>bold;</li>
+            <li>bolder;</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Shorthand - Font</h3>
+          <p>
+            É possível utilizar a versão shorthand, no qual não é necessário
+            estabelecer uma regra css para cada propriedade do tipo font.
+          </p>
+        </div>
+        <div>
+          <h3>Lista de propriedades CSS Font:</h3>
+          <ul>
+            <li><code>font-family</code></li>
+            <li><code>font-weight</code></li>
+            <li><code>font-size</code></li>
+            <li><code>font-style</code></li>
+          </ul>
+          <p>
+            Também é possível utilizar a versão <strong>shorthand</strong> a
+            propriedade <code>font</code>
+          </p>
+          <p>
+            A propriedade <code>font</code> segue a seguinte ordem:
+            <br />
+            font-style -> font-weight -> font-size -> font-family
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h3>Alinhamento do texto:</h3>
+          <ul>
+            <li><code>text-alignt: left</code></li>
+            <li><code>text-alignt: right</code></li>
+            <li><code>text-alignt: center</code></li>
+            <li><code>text-alignt: justify</code></li>
+          </ul>
+          <hr />
+        </div>
+        <div>
+          <h3>Seletores CSS</h3>
+          <div>
+            <h4>Id</h4>
+            <p>
+              Possui maior prioridade sobre as classes.
+              <br />
+              Ele é único. Para utilizar IDs, deve-se utilizar o: <code>#</code>
+            </p>
+          </div>
+          <div>
+            <h4>Classes</h4>
+            <p>
+              Possui menor prioridade em relação aos IDs.
+              <br />
+              Pode ser quantas vezes for necessário, e em diferentes tags.
+              <br />
+              É possível aplicar mais de uma classe na mesma tag.
+              <br />
+              Vale ressaltar que é possível utilizar ID e Classe ao mesmo tempo.
+              <br />
+              Para utilizar classes, deve-se utilizar o: <code>.</code>
+            </p>
+          </div>
+          <hr />
+        </div>
+        <div>
+          <h3>Display</h3>
+          <p>
+            Compared to display: inline, the major difference is that
+            <code> display: inline-block </code> allows to set a width and
+            height on the element.
+            <br />
+            Also, with <code>display: inline-block</code>, the top and bottom
+            margins/paddings are respected, but with
+            <code>display: inline</code> they are not.
+            <br />
+            Compared to <code>display: block</code>, the major difference is
+            that <code> display: inline-block </code> does not add a line-break
+            after the element, so the element can sit next to other elements.
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h3>Pseudo-classes</h3>
+          <p>
+            Através do <code>:</code>, após um <span>seletor</span>, é possível
+            adicionar uma <span>pseudo-classe</span>
+          </p>
+          <p>Ex.:</p>
+          <pre>
+            <code>
+  classeQualquer:hover { 
+    //código css... 
+  }
+            </code>
+          </pre>
+          <p>Ex. 02:</p>
+          <pre>
+            <code>
+  div > p { 
+    //código css... 
+  }
+            </code>
+          </pre>
+          <p>
+            Assim, é possível selecionar especificamente todas tags
+            <code>&lt;p&gt; &lt;/p&gt;</code> dentro de tags
+            <code>&lt;div&gt; &lt;/div&gt;</code>
+          </p>
+        </div>
+        <div>
+          <h3>Lista de Pseudo-classes / Pseudo-elementos</h3>
+        </div>
+        <hr />
+      </div>
+      <div>
+        <h3>Lista de links</h3>
+        <ul id="lista-de-links">
+          <li><a href="#" class="item-link">Link 1111</a></li>
+          <li><a href="#" class="item-link">Link 2222</a></li>
+          <li><a href="#" class="item-link">Link 3333</a></li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Exemplo de caixa box-level</h2>
+        <p>Parágrafos são exemplos de box-level</p>
+        <p>box-level => <code>display: block</code></p>
+        <a href="#">Links são exemplos de line level</a>
+        <p>line-level => <code>display: inline</code></p>
+        <p>
+          Vale destacar que as medidas:
+          <code>width: 300px</code>
+          e
+          <code>height: 300px </code>
+          são nomeadas como -> box-sizing.
+        </p>
+        <hr />
+      </div>
+      <div>
+        <h2>Grouping Tags</h2>
+        <div>
+          <h3>Grouping Tags NÃO SEMÂNTICAS</h3>
+          <p>Existem as grouping tags que não possuem semântica, como:</p>
+          <pre>
+            <code>&lt;div&gt; &lt;/div&gt;</code>
+
+            <code>&lt;span&gt; &lt;/span&gt;</code>
+          </pre>
+        </div>
+        <div>
+          <h3>Grouping Tags SEMÂNTICAS</h3>
+          <p>Existem as grouping tags que possuem semântica, como:</p>
+          <pre>
+            <code>&lt;header&gt; &lt;/header&gt;</code>
+
+            <code>&lt;nav&gt; &lt;/nav&gt;</code>
+
+            <code>&lt;main&gt; &lt;/main&gt;</code>
+
+            <code>&lt;section&gt; &lt;/section&gt;</code>
+
+            <code>&lt;article&gt; &lt;/article&gt;</code>
+
+            <code>&lt;footer&gt; &lt;/footer&gt;</code>
+          </pre>
+          <ul>
+            <li><p>header => CABEÇALHO</p></li>
+            <li><p>nav => MENU</p></li>
+            <li><p>main => CONTEÚDO PRINCIPAL</p></li>
+            <li><p>section => SEÇÃO COM CONTEÚDO</p></li>
+            <li><p>article => ARTIGO</p></li>
+            <li>
+              <p>
+                aside => CONTEÚDO INDIRETAMENTE RELACIONADO COM O CONTEÚDO
+                PRINCIPAL
+              </p>
+            </li>
+            <li><p>footer => RODAPÉ</p></li>
+          </ul>
+          <hr />
+        </div>
+        <div>
+          <h2>Exemplo de SITE com Grouping Tags SEMÂNTICAS</h2>
+          <!-- A div é apenas para separar o conteúdo e entender onde começa e termina o site exemplo -->
+          <div class="body-ex">
+            <header class="header-ex">
+              <h1>Site Exemplo</h1>
+              <nav class="menu-ex">
+                <ul>
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                  <li><a href="#">Link 5</a></li>
+                </ul>
+              </nav>
+            </header>
+            <main class="main-ex">
+              <section>
+                <h2>Seção 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Libero nulla iste fugiat blanditiis, officia aut modi expedita
+                  at est magnam, porro, beatae enim tenetur delectus veniam.
+                </p>
+              </section>
+              <section>
+                <h2>Seção 2 - Notícias</h2>
+                <article>
+                  <h3>Notícia 1</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Iste quod quidem iusto mollitia blanditiis cum hic natus,
+                    aliquid labore. Quo ducimus atque minus officia maxime
+                    architecto nesciunt fugit ex ipsam.
+                  </p>
+                  <aside>
+                    <p>Artigo escrito por Lorem ipsum</p>
+                  </aside>
+                </article>
+              </section>
+            </main>
+            <footer class="footer-ex">
+              Desenvolvido no Curso de HTML e CSS 2
+            </footer>
+          </div>
+          <hr />
+        </div>
+        <div>
+          <h2>Borda com Imagem</h2>
+          <div>
+            <p>
+              É possível adicionar imagem nas bordas através das propriedades
+              css:
+            </p>
+            <pre>
+              <code>border-image-source: url(imagem.png)</code>
+              <code>border-image-slice: 27</code>
+              <code>border-image-repeat: repeat</code>
+            </pre>
+          </div>
+        </div>
+        <div>
+          <h2>Responsividade</h2>
+          <p>Responsividade com largura fixa e alinhamento do conteúdo.</p>
+          <p>
+            Primeiramente determine a <b>largura mínima</b> da tela. Geralmente,
+            celulares mais antigos possuem uma largura de 320px. Para isso,
+            utilize: <code>min-width: 320px;</code>
+            Dessa forma, a tela terá no mínimo 320px, nada menos que isso.
+          </p>
+          <p>
+            Posteriormente, determine o <b>tamanho máximo</b> da tela,
+            independente do tamanho da tela. Ex.: <code>max-width: 800px</code>
+            Dessa forma, o elemento que possuir essa propriedade CSS, não terá
+            uma largura maior que 800px, independente do quão larga seja a tela.
+          </p>
+          <p>
+            Por fim, para centralizar o conteúdo caso a largura do elemento seja
+            menor que a tela, utilize <code>margin: 0 auto</code>
+          </p>
+          <p>
+            Vale ressaltar que, é possível utilizar as tags
+            <code>picture</code> e <code>source</code>, para tornar a imagem
+            mais reponsiva, assim quando a tela possuir determinado tamanho será
+            exibido uma imagem que adapta-se melhor a essa determianda largura.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

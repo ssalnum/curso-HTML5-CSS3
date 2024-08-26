@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página 002</title>
+  </head>
+  <body>
+    <h1>Esta é a segunda página</h1>
+    <div>
+      <p>
+        Para retornar, basta
+        <a href="../index.html" target="_self" rel="prev">clickar aqui</a>
+      </p>
+      <p>
+        Atributos utilizados nesse link:
+        <code>&lt;a href="../index.html" rel="prev"&gt; &lt;/a&gt;</code>
+        <br />
+        Através do atributo "rel", é possível especificar o tipo do link, se é
+        interno ("next", "prev"), externo, etc.
+        <br />
+        Neste caso, é um link interno que aponta para a página anterior, através
+        do atributo "rel=prev".
+        <br />
+        Além disso, há o atributo "target="_self"", no qual especifica que o
+        link aponta para a própria página.
+      </p>
+    </div>
+    <div>
+      <h2>Usando links externos</h2>
+      <p>
+        Link para o
+        <a href="https://github.com/" target="_blank" rel="nofollow">GitHub </a>
+      </p>
+      <p>
+        Atributos utilizados nesse link:
+        <code
+          >&lt;a href="https://github.com/" target="_blank" rel="nofollow"&gt;
+          &lt;/a&gt;</code
+        >
+        <br />
+        Através do atributo "rel", é possível especificar o tipo do link, se é
+        interno ("next", "prev"), externo, etc.
+        <br />
+        Neste caso, é um link externo, no qual é especificado para o mecanismo
+        de busca não perpetuar a busca, não possui o aval, isso deve-se ao
+        atributo "rel=nofollow".
+      </p>
+    </div>
+  </body>
+</html>
